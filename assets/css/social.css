@@ -1,0 +1,74 @@
+@import url('palette.css');
+
+/* Contenedor de iconos sociales */
+.social-icons-container {
+    position: fixed;
+    top: 50%;
+    right: -70px; /* Oculto fuera del viewport */
+    transform: translateY(-50%);
+    transition: right 0.3s ease-in-out;
+    width: 80px;
+    background-color: var(--primary-color);
+    border-radius: 10px 0 0 10px;
+    padding: 20px 10px;
+    text-align: center;
+    color: var(--secondary-color);
+    z-index: 1000;
+}
+
+.social-icons-container:hover,
+.social-icons-container:focus-within {
+    right: 0; /* Aparece al hacer hover o al recibir foco */
+}
+
+/* Lista de iconos */
+.social-icons ul {
+    padding: 0;
+    margin: 0;
+}
+
+.social-icons ul li {
+    list-style: none;
+}
+
+.social-icons ul li a {
+    font-size: 2rem; /* Tamaño de íconos */
+    color: var(--secondary-color); /* Color inicial */
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+    display: inline-block;
+    margin: 10px 0; /* Separación entre íconos */
+}
+
+.social-icons ul li a:hover {
+    transform: scale(1.2); /* Efecto de ampliación */
+    color: var(--accent-color); /* Cambia al color de acento */
+}
+
+/* Footer */
+footer {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Media Queries para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .social-icons-container {
+        right: -70px; /* Colapsada por defecto */
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60px; /* Reduce el ancho */
+        padding: 15px 5px; /* Ajusta el padding */
+    }
+
+    .social-icons-container.active {
+        right: 0; /* Desplegada cuando esté activa */
+    }
+
+    .social-icons ul li a {
+        font-size: 1.5rem; /* Tamaño de íconos más pequeño */
+    }
+}
