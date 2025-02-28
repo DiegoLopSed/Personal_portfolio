@@ -1,0 +1,104 @@
+@import url('palette.css');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    padding: 10px;
+}
+
+.navbar-brand, .nav-link {
+    color: var(--secondary-color) !important;
+}
+
+.sidebar {
+    background-color: var(--secondary-color);
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos en la barra lateral */
+}
+
+.sidebar img {
+    width: 120px; /* Ajusta el tamaño de la imagen */
+    height: 120px; /* Mantén el aspecto circular */
+    object-fit: cover; /* Asegura que la imagen se recorte para encajar perfectamente */
+    border-radius: 50%; /* Hace la imagen circular */
+    border: 3px solid var(--accent-color); /* Añade un borde de color */
+    margin-bottom: 15px; /* Espaciado entre la imagen y el texto */
+}
+
+.sidebar h5, .sidebar p {
+    text-align: center; /* Centra el texto debajo de la imagen */
+}
+
+.content {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chart {
+    background-color: var(--background-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    background-color: var(--primary-color);
+    padding: 10px;
+}
+
+.footer {
+    color: var(--secondary-color);
+}
+
+.rounded-circle {
+    border: 3px solid var(--accent-color);
+}
+
+.bg-primary {
+    background-color: var(--accent-color) !important;
+}
+
+/* Estilo del selector en el navbar */
+#language-selector {
+    background-color: transparent; /* Fondo transparente para integrarse con el navbar */
+    color: var(--secondary-color); /* Texto que coincida con el color del texto en el navbar */
+    border: 1px solid var(--secondary-color); /* Borde sutil para mantener consistencia */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 0.3rem 0.8rem;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+/* Hover y Focus */
+#language-selector:hover {
+    background-color: var(--secondary-color); /* Fondo claro al pasar el mouse */
+    color: var(--primary-color); /* Texto oscuro al pasar el mouse */
+    cursor: pointer;
+}
+
+#language-selector:focus {
+    outline: none;
+    border-color: var(--accent-color); /* Resaltar el borde al enfocar */
+    box-shadow: 0 0 5px var(--accent-color); /* Sombra sutil para indicar enfoque */
+}
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+    #language-selector {
+        font-size: 0.8rem; /* Reducir tamaño en pantallas pequeñas */
+        padding: 0.2rem 0.6rem;
+    }
+}
+
