@@ -1,0 +1,95 @@
+.lora-light {
+    font-family: "Lora", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.lora-regular {
+    font-family: "Lora", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.lora-bold {
+    font-family: "Lora", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lora-black {
+    font-family: "Lora", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.lora-light-italic {
+    font-family: "Lora", serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.lora-regular-italic {
+    font-family: "Lora", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.lora-bold-italic {
+    font-family: "Lora", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.lora-black-italic {
+    font-family: "Lora", serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.merriweather-light {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.merriweather-regular {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.merriweather-bold {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.merriweather-black {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.merriweather-light-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.merriweather-regular-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.merriweather-bold-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.merriweather-black-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+}
