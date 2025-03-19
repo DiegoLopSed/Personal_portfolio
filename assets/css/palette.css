@@ -1,7 +1,27 @@
 :root {
-    --background-color: #FFFFFF;
-    --primary-color: #2C3E50;
-    --secondary-color: #ECF0F1;
-    --accent-color: #E67E22;
-    --text-color: #2C3E50;
+    --background-color: #F5F9FF; /* Azul muy claro, casi blanco */
+    --primary-color: #1B4F72;   /* Azul profundo */
+    --secondary-color: #D6EAF8; /* Azul pastel */
+    --accent-color: #3498DB;    /* Azul vibrante para destacar */
+    --text-color: #154360;      /* Azul oscuro para el texto */
+    
+    /* Colores para sombras y efectos */
+    --shadow-color: rgba(27, 79, 114, 0.2);      /* Sombra basada en primary-color */
+    --hover-primary: #2C6E9B;                    /* Versión más oscura del primary para hover */
+    --hover-accent: #2980B9;                     /* Versión más oscura del accent para hover */
+    --overlay-color: rgba(21, 67, 96, 0.8);      /* Overlay basado en text-color */
+    
+    /* Gradientes */
+    --gradient-primary: linear-gradient(to right, #1B4F72, #3498DB);
+    --gradient-secondary: linear-gradient(to right, #D6EAF8, #F5F9FF);
+    
+    /* Variaciones de transparencia */
+    --primary-transparent: rgba(27, 79, 114, 0.9);
+    --accent-transparent: rgba(52, 152, 219, 0.9);
+    
+    /* Bordes y divisores */
+    --border-light: #AED6F1;                     /* Borde suave */
+    --border-dark: #2874A6;                      /* Borde contrastante */
+
+
 }

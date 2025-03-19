@@ -24,15 +24,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center; /* Centra los elementos en la barra lateral */
+    border-right: 5px solid var(--border-dark);
+    border-bottom: 5px solid var(--border-dark);   
 }
 
+
 .sidebar img {
-    width: 120px; /* Ajusta el tamaño de la imagen */
-    height: 120px; /* Mantén el aspecto circular */
-    object-fit: cover; /* Asegura que la imagen se recorte para encajar perfectamente */
-    border-radius: 50%; /* Hace la imagen circular */
-    border: 3px solid var(--accent-color); /* Añade un borde de color */
-    margin-bottom: 15px; /* Espaciado entre la imagen y el texto */
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--accent-color);
+    margin-bottom: 15px;
 }
 
 .sidebar h5, .sidebar p {
@@ -40,10 +43,12 @@ body {
 }
 
 .content {
+    box-shadow: 0 2rem 4rem rgba(27, 79, 114, 0.4);
     background-color: var(--secondary-color);
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 2rem;
+    margin-top: 2rem;
 }
 
 .chart {
@@ -94,11 +99,54 @@ body {
     box-shadow: 0 0 5px var(--accent-color); /* Sombra sutil para indicar enfoque */
 }
 
-/* Ajuste responsivo */
+
+.language {
+    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.tech-images {
+    display: -ms-flexbox;
+    flex:none;
+    gap: 60px;
+}
+
+.tech-images img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: var(--background-color);
+    transition: all 0.3s ease;
+}
+
+.tech-images img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
 @media (max-width: 768px) {
-    #language-selector {
-        font-size: 0.8rem; /* Reducir tamaño en pantallas pequeñas */
-        padding: 0.2rem 0.6rem;
+    .language{
+        margin-left: 0px;
+    }
+    .tech-images img {
+        width: 60px;
+        height: 60px;
+        padding: 8px;
     }
 }
+
+@media (max-width: 480px) {
+    .language{
+        margin-left: 0px;
+    }
+    .tech-images img {
+        width: 50px;
+        height: 50px;
+        padding: 6px;
+    }
+}
+
 
