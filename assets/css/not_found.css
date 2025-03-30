@@ -9,19 +9,22 @@
     font-weight: bold;
     color: var(--accent-color);
     margin: 0;
+    text-shadow: 0 0 10px rgba(52, 152, 219, 0.8);
 }
 .error-subtitle {
     font-size: 2rem;
     margin: 20px 0;
+    color: #fff;
 }
 .error-message {
     font-size: 1.2rem;
     margin-bottom: 30px;
+    color: #ccc;
 }
 .btn-home {
     padding: 10px 20px;
     font-size: 1.2rem;
-    color: var(--background-color);
+    color: #fff;
     background-color: var(--accent-color);
     border: none;
     border-radius: 8px;
@@ -31,14 +34,21 @@
 }
 .btn-home:hover {
     transform: translateY(-3px);
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 5px 15px rgba(52, 152, 219, 0.5);
 }
 .floating-icon {
     font-size: 5rem;
     margin-top: 20px;
-    color: var(--text-color);
+    color: #fff;
     animation: float 3s infinite;
 }
+
+.error-page {
+    background-color: #0a192f;
+    background-image: radial-gradient(circle at 50% 50%, #0f2847, #061325);
+    min-height: 100vh;
+}
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -46,4 +56,53 @@
 @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
+}
+
+/* Estilos para el contenedor del planeta y las estrellas */
+.planet-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.planet {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle at 30% 30%, #3498DB, #0a192f);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 50px rgba(52, 152, 219, 0.5);
+    animation: rotate 20s linear infinite;
+}
+
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #fff;
+    border-radius: 50%;
+    animation: twinkle 1s infinite;
+    box-shadow: 0 0 4px #fff;
+}
+
+@keyframes rotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
 }

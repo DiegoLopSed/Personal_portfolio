@@ -1,24 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Page Not Found</title>
+    <title>404 - Página no encontrada</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/not_found.css">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 </head>
-<body>
+
+<body class="error-page">
     <div class="error-container">
-        <h1 class="error-title">404</h1>
-        <p class="error-subtitle">Oops! Page Not Found</p>
-        <p class="error-message">The page you're looking for doesn't exist or was moved.</p>
-        <a href="./" class="btn-home">Go Home</a>
-        <div class="floating-icon">
-            <i class="fas fa-exclamation-triangle"></i>
+        <div class="glitch-wrapper">
+            <h1 class="error-title glitch" data-text="404">404</h1>
+        </div>
+        <p class="error-subtitle animate-text">¡Ups! Página no encontrada</p>
+        <p class="error-message animate-fade">La página que buscas no existe o fue movida a otra ubicación.</p>
+        <div class="interactive-elements">
+            <div class="planet-container">
+                <div class="planet">
+                    <div class="floating-astronaut"
+                        style="width: 100px; height: 100px; margin: 0 auto; display: flex; justify-content: center; align-items: center;">
+                        <img src="./assets/images/astronaut.png" alt="Astronauta perdido"
+                            style="width: 100%; height: auto; object-fit: contain;">
+                    </div>
+                </div>
+                <div class="stars"></div>
+            </div>
+        </div>
+        <a href="./" class="btn-home pulse-effect">
+            <i class="fas fa-rocket"></i>
+            Volver al Inicio
+        </a>
+        <div class="mouse-trail">
+            <div class="particle"></div>
         </div>
     </div>
+
+    <script>
+        // Efecto de seguimiento del cursor
+        document.addEventListener('mousemove', (e) => {
+            const trail = document.querySelector('.particle');
+            trail.style.left = e.pageX + 'px';
+            trail.style.top = e.pageY + 'px';
+        });
+
+
+        gsap.from('.floating-astronaut', {
+            duration: 3,
+            y: 10,
+            x: 5,
+            rotation: 360,
+            yoyo: true,
+            repeat: -1,
+            ease: 'none'
+        });
+
+        // Efecto de estrellas parpadeantes
+        const createStars = () => {
+            const stars = document.querySelector('.stars');
+            for (let i = 0; i < 50; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.animationDelay = `${Math.random() * 5}s`;
+                stars.appendChild(star);
+            }
+        };
+        createStars();
+    </script>
 </body>
+
 </html>
