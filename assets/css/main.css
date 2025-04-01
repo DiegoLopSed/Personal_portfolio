@@ -19,22 +19,28 @@ body {
 
 .sidebar {
     background-color: var(--secondary-color);
-    height: 100%;
+    height: 100vh; /* Hace que ocupe toda la altura de la pantalla */
     padding: 20px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra los elementos en la barra lateral */
-    border-right: 5px solid var(--border-dark);
-    border-bottom: 5px solid var(--border-dark);   
+    align-items: center;
+    border: 5px solid var(--border-dark);
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+    width: 250px; /* Ancho fijo para pantallas grandes */
+    transition: all 0.3s ease-in-out;
+    height: auto;
 }
 
 
-.sidebar img {
-    width: 100px;
-    height: 100px;
+
+.user-img {
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid var(--accent-color);
     margin-bottom: 15px;
 }
 
@@ -47,7 +53,7 @@ body {
     background-color: var(--secondary-color);
     border-radius: 8px;
     padding: 20px;
-    margin-left: 2rem;
+    margin-left: 1rem;
     margin-top: 2rem;
 }
 
@@ -75,29 +81,6 @@ body {
     background-color: var(--accent-color) !important;
 }
 
-/* Estilo del selector en el navbar */
-#language-selector {
-    background-color: transparent; /* Fondo transparente para integrarse con el navbar */
-    color: var(--secondary-color); /* Texto que coincida con el color del texto en el navbar */
-    border: 1px solid var(--secondary-color); /* Borde sutil para mantener consistencia */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 0.3rem 0.8rem;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-}
-
-/* Hover y Focus */
-#language-selector:hover {
-    background-color: var(--secondary-color); /* Fondo claro al pasar el mouse */
-    color: var(--primary-color); /* Texto oscuro al pasar el mouse */
-    cursor: pointer;
-}
-
-#language-selector:focus {
-    outline: none;
-    border-color: var(--accent-color); /* Resaltar el borde al enfocar */
-    box-shadow: 0 0 5px var(--accent-color); /* Sombra sutil para indicar enfoque */
-}
 
 
 .language {
@@ -149,4 +132,30 @@ body {
     }
 }
 
+
+/* Adaptación para tablets y pantallas medianas */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 200px; /* Reduce el ancho */
+        padding: 15px;
+    }
+}
+
+/* Adaptación para móviles */
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed; /* Se convierte en menú lateral fijo */
+        left: -250px; /* Oculto por defecto */
+        top: 0;
+        height: 100vh;
+        width: 250px;
+        margin-top: 0;
+        padding: 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .sidebar.active {
+        transform: translateX(250px); /* Se muestra cuando se activa */
+    }
+}
 
